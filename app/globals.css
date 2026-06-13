@@ -1,26 +1,126 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
+}
+
+/* Futuristic Professional Dark Theme */
+:root {
+  --bg-primary: #0A1628;
+  --bg-secondary: #0F1E36;
+  --bg-card: #111B2E;
+  --accent: #3B82F6;
+  --accent-glow: #60A5FA;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border: rgba(148, 163, 184, 0.12);
+}
+
+/* Subtle futuristic grid background */
+.futuristic-bg {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Enhanced Cards with futuristic feel */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.23, 1.0, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(96, 165, 250, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
+              0 8px 10px -6px rgb(0 0 0 / 0.1),
+              0 0 0 1px rgba(96, 165, 250, 0.08);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Section headings */
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.0;
+  letter-spacing: -2.5px;
+  font-weight: 600;
+}
+
+/* Futuristic accent styling */
+.accent {
+  color: var(--accent-glow);
+}
+
+.cta-button {
+  transition: all 0.2s cubic-bezier(0.23, 1.0, 0.32, 1);
+  position: relative;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3),
+              0 0 0 1px rgba(96, 165, 250, 0.2);
+}
+
+/* Form inputs */
+.form-input {
+  background-color: #0F1E36;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #60A5FA;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.08);
+  outline: none;
+}
+
+/* Module cards */
+.module-card {
+  transition: all 0.3s cubic-bezier(0.23, 1.0, 0.32, 1);
+  border: 1px solid var(--border);
+}
+
+.module-card:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  transform: translateY(-3px);
+  background-color: #0F1E36;
+}
+
+/* Strong anti-MSP messaging */
+.msp-killer {
+  position: relative;
+}
+
+.msp-killer::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #60A5FA, transparent);
 }
