@@ -52,6 +52,33 @@ export default function Home() {
         </div>
       </div>
 
+      {/* New Savings & Contract Messages */}
+      <section className="bg-[#111B2E] py-12 border-b border-white/10">
+        <div className="max-w-5xl mx-auto px-6 space-y-8 text-center">
+          
+          {/* Message 1 - Savings */}
+          <div>
+            <p className="text-2xl md:text-[28px] font-semibold tracking-tight leading-tight">
+              If you spend more than <span className="text-[#60A5FA]">£3k a month</span> with your MSP,<br />
+              then you are definitely not efficient — <span className="text-emerald-400">and we will save you money.</span>
+            </p>
+          </div>
+
+          {/* Divider */}
+          <div className="w-16 h-px bg-white/20 mx-auto" />
+
+          {/* Message 2 - Contract flexibility */}
+          <div>
+            <p className="text-xl md:text-2xl font-medium tracking-tight text-white/90 leading-tight">
+              If you are still in contract with your MSP, you should not wait.<br />
+              We can build and deploy efficiencies and applications into your business now.<br />
+              When your contract ends, we can add the IT support and security services.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* Why Traditional MSPs Fail */}
       <section className="max-w-6xl mx-auto px-6 py-20 border-b border-white/10">
         <div className="text-center mb-12">
