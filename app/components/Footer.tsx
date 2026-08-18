@@ -45,6 +45,9 @@ export default function Footer() {
               <Link href="/solutions" className="block hover:text-white">
                 Features
               </Link>
+              <Link href="/ai-consultancy" className="block hover:text-white">
+                AI consultancy
+              </Link>
               <Link href="/pricing" className="block hover:text-white">
                 Pricing
               </Link>

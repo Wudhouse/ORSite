@@ -17,8 +17,9 @@ export default function PricingPage() {
           £19 a person a month. Shield £29. 30 days free. Month to month.
         </p>
         <p className="mt-4 text-lg leading-relaxed text-[#8a8f98]">
-          Your MSP charges £45–£85 a person a month, on a 12-month contract, plus a setup fee. We
-          charge £19, monthly, no setup. Five people minimum.
+          Your MSP charges £45–£85 per person per month, on at least a 12-month contract, plus a
+          setup fee. We charge £19 per person per month. Your MSP also charges you for setting up
+          new laptops, we don’t.
         </p>
       </div>
 
@@ -62,6 +63,10 @@ export default function PricingPage() {
               <span className="text-emerald-400">✓</span> Email in is handled. You get a rating link
               when it closes.
             </li>
+            <li className="flex gap-2">
+              <span className="text-emerald-400">✓</span> 1 hour of AI consultancy a month — roadmap
+              sessions, with options to train you or build it for you.
+            </li>
           </ul>
 
           <h3 className="mt-8 text-sm font-semibold uppercase tracking-[0.14em] text-[#d0d6e0]">
@@ -98,7 +103,7 @@ export default function PricingPage() {
               <span className="text-emerald-400">✓</span> Front of the queue.
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald-400">✓</span> 1-hour target when something is on fire
+              <span className="text-emerald-400">✓</span> 1-hour target fix when something is on fire
               (still UK weekdays 8am–6pm).
             </li>
             <li className="flex gap-2">

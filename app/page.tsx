@@ -71,9 +71,11 @@ export default function Home() {
         </h1>
 
         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-[#8a8f98] sm:text-xl">
-          Override is a simple workplace app for Microsoft 365 businesses. Your team asks for help
-          in plain English. AI does the routine fixes. Trusted people in your company approve the
-          bigger changes. A real engineer steps in when something is hard or urgent.
+          Override is a simple workplace app for ANY business using Microsoft 365 services. Your
+          team asks for help in plain English. AI does the routine fixes. Trusted people in your
+          company approve the bigger changes. A real engineer steps in when something is hard or
+          urgent. Almost all of our customers see an 87% drop in monthly ticket volumes. We are
+          actually aiming for a 100% reduction in ticket volumes.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -300,6 +302,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI consultancy teaser */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-[#12131a] via-[#0b0c12] to-[#15102a] p-6 sm:p-10 lg:p-12">
+          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+            <div>
+              <p className="eyebrow mb-4">Included with Override</p>
+              <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
+                An hour of AI consultancy.
+                <br />
+                <span className="gradient-text">Every month.</span>
+              </h2>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-[#d0d6e0]">
+                Each Override customer gets an hour of AI consultancy a month — on Teams or in
+                person where geography allows (we’re not flying to Brazil). We use it to produce
+                your AI roadmap.
+              </p>
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#8a8f98]">
+                Then you choose: we train you to implement AI in the business, or we build the AI
+                for you. Need longer? Buy more hours or days. Every roadmap comes with an ROI
+                calculator so you can see the impact.
+              </p>
+              <Link href="/ai-consultancy" className="btn-primary mt-8 inline-flex">
+                How AI consultancy works
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
+            <ul className="space-y-3">
+              {[
+                '1 hour / month included',
+                'AI roadmap for your business',
+                'Train you — or we build it',
+                'ROI calculator on every roadmap',
+                'Extra hours or days if you need them',
+              ].map((line) => (
+                <li
+                  key={line}
+                  className="flex items-start gap-3 rounded-xl border border-white/[0.06] bg-black/25 px-4 py-3 text-sm text-[#d0d6e0]"
+                >
+                  <span className="mt-0.5 text-emerald-400">✓</span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing teaser — commercial copy from ORSite */}
       <section className="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
         <div className="overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-[#5e6ad2]/25 via-[#0b0c12] to-cyan-500/15 p-6 sm:p-10">
@@ -309,8 +358,9 @@ export default function Home() {
             £19 a person a month. Shield £29. 30 days free. Month to month.
           </p>
           <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[#d0d6e0]/90">
-            Your MSP charges £45–£85 a person a month, on a 12-month contract, plus a setup fee. We
-            charge £19, monthly, no setup. Five people minimum.
+            Your MSP charges £45–£85 per person per month, on at least a 12-month contract, plus a setup fee. We
+            charge £19 per person per month. Your MSP also charges you for setting up new laptops, we
+            don’t.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/pricing" className="btn-primary">
