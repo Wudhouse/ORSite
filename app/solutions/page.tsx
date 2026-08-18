@@ -1,88 +1,129 @@
 import Link from 'next/link';
 
-const featuredModule = {
-  title: "FCA Regulatory Reporting & Liquidity Intelligence",
-  category: "COMPLIANCE",
-  desc: "For FCA-regulated businesses, preparing accurate quarterly regulatory returns is a recurring burden. This module helps reduce manual effort and risk by supporting the collection, validation, and structuring of data required for FCA submissions, with a strong focus on liquidity and capital reporting.",
-  outcomes: ["78% reduction in time to prepare returns", "99.4% data accuracy", "Audit-ready reports in minutes", "Automated liquidity forecasting"],
-  badge: "Most requested"
-};
-
-const modules = [
-  { name: "IT Support Core", desc: "Modern ticketing, remote support, proactive monitoring and incident management." },
-  { name: "Microsoft 365 Intelligence Layer", desc: "Advanced analytics, automation and governance across your Microsoft ecosystem." },
-  { name: "Security Baseline & Monitoring", desc: "24/7 threat detection, endpoint protection, vulnerability management and compliance reporting." },
-  { name: "Knowledge & RAG System", desc: "Enterprise search and AI assistant trained on your internal documents and policies." },
-  { name: "Integration Bus", desc: "Secure, reliable integration between your critical business systems and applications." },
-  { name: "Process Automation Engine", desc: "Low-code automation of repetitive business processes with full audit trails." },
-  { name: "Finance & Forecasting", desc: "Real-time financial dashboards, cashflow forecasting and board-ready reporting." },
-  { name: "Client Portal & CRM", desc: "Professional client-facing portals with secure document exchange and service tracking." },
-  { name: "Data Platform Foundation", desc: "Centralised, governed data platform ready for analytics, AI and reporting." },
-  { name: "HR & Workforce Intelligence", desc: "Onboarding, performance, absence and workforce planning tools." },
+const features = [
+  {
+    group: 'Get help',
+    items: [
+      {
+        name: 'Plain-English Help',
+        desc: 'Describe the problem like you’d tell a colleague. Override diagnoses common Microsoft and laptop issues and fixes what it’s allowed to fix.',
+      },
+      {
+        name: 'Get back in (sign-in recovery)',
+        desc: 'When someone is locked out of Microsoft, a trusted person can issue a one-time sign-in pass. The code is shown once for safety, then they set up normal access again.',
+      },
+      {
+        name: 'My requests & tickets',
+        desc: 'See what’s open, what’s waiting for approval, and what’s done — without chasing email threads.',
+      },
+    ],
+  },
+  {
+    group: 'Run the office',
+    items: [
+      {
+        name: 'People: starters & leavers',
+        desc: 'Create accounts for new joiners and cleanly remove access when someone leaves. The important steps are guided and logged.',
+      },
+      {
+        name: 'Licences & access',
+        desc: 'Give people the Microsoft tools they need from the licences you already pay for. Bigger purchases go through the right approver.',
+      },
+      {
+        name: 'Order a laptop',
+        desc: 'Company admins order from an approved shortlist, name who it’s for, confirm the price, and track delivery status in one place.',
+      },
+      {
+        name: 'Workplace files & places',
+        desc: 'Keep working information about people, places, and day-to-day ops next to the actions — so context isn’t stuck in someone’s inbox.',
+      },
+    ],
+  },
+  {
+    group: 'Stay in control',
+    items: [
+      {
+        name: 'Approvals',
+        desc: 'Team members can ask; Approvers decide. High-impact changes aren’t a free-for-all, and nobody approves their own risky request.',
+      },
+      {
+        name: 'Clear company roles',
+        desc: 'Team member, Approver, and Company admin — simple names for who can help themselves, who can help others, and who runs the company settings.',
+      },
+      {
+        name: 'Reports you can actually read',
+        desc: 'Company admins get a straightforward view of what’s going on — security and activity without a wall of technical charts.',
+      },
+      {
+        name: 'Audit trail',
+        desc: 'Every important action keeps a story: who asked, what changed, and when. Built for businesses that may need to explain themselves later.',
+      },
+    ],
+  },
+  {
+    group: 'Safety net',
+    items: [
+      {
+        name: 'AI first, humans when needed',
+        desc: 'Routine work is handled quickly. If Override can’t finish in about ten minutes, an engineer takes over with full context.',
+      },
+      {
+        name: 'Urgent problems jump the line',
+        desc: 'Serious outages don’t sit behind password resets. Critical issues go straight to a person.',
+      },
+      {
+        name: 'Confirm before big changes',
+        desc: 'Wiping a device, offboarding, or other high-impact steps ask for a clear yes — with a plain explanation of what will happen.',
+      },
+    ],
+  },
 ];
 
 export default function Solutions() {
   return (
     <div>
-      <div className="max-w-5xl mx-auto px-6 pt-16 pb-12">
-        <div className="max-w-3xl">
-          <div className="text-[#60A5FA] text-xs tracking-[3px] font-medium mb-3">OUR MODULE LIBRARY</div>
-          <h1 className="section-heading tracking-[-2.5px]">Pre-built modules.<br />Rapid delivery.<br />The end of generic MSP support.</h1>
-          <p className="mt-5 text-xl text-white/70">We combine proven modules with targeted custom development to deliver production-ready applications that replace traditional MSP services.</p>
+      <div className="mx-auto max-w-6xl px-4 pt-16 pb-10 sm:px-6">
+        <div className="max-w-2xl">
+          <p className="eyebrow mb-3">Features</p>
+          <h1 className="display text-4xl sm:text-5xl">
+            Everything in the platform — explained simply.
+          </h1>
+          <p className="mt-5 text-lg leading-relaxed text-[#8a8f98]">
+            No acronym soup. Here’s what Override helps a non-technical team do day to day with
+            Microsoft 365 and company devices.
+          </p>
         </div>
       </div>
 
-      {/* Featured Module */}
-      <div className="bg-[#111B2E] py-12">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 text-xs font-semibold tracking-widest rounded-full bg-[#60A5FA] text-[#0A1628]">{featuredModule.category}</span>
-            <span className="px-3 py-1 text-xs font-semibold tracking-widest rounded-full border border-[#60A5FA]/40 text-[#60A5FA]">{featuredModule.badge}</span>
-          </div>
-          <h2 className="text-4xl font-semibold tracking-tight mb-6">{featuredModule.title}</h2>
-          <p className="max-w-3xl text-xl text-white/80 mb-10">{featuredModule.desc}</p>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <div className="text-sm tracking-wider text-white/60 mb-3">PROVEN OUTCOMES</div>
-              <ul className="space-y-3">
-                {featuredModule.outcomes.map((outcome, i) => (
-                  <li key={i} className="flex items-start gap-3 text-lg">
-                    <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0" /> 
-                    {outcome}
-                  </li>
-                ))}
-              </ul>
+      <div className="mx-auto max-w-6xl space-y-14 px-4 pb-20 sm:px-6">
+        {features.map((section) => (
+          <section key={section.group}>
+            <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#7170ff]">
+              {section.group}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {section.items.map((item) => (
+                <article key={item.name} className="card p-6 sm:p-7">
+                  <h3 className="text-lg font-semibold tracking-tight text-white">{item.name}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-[#8a8f98]">{item.desc}</p>
+                </article>
+              ))}
             </div>
-            <div className="pt-2">
-              <Link href="/book-consultation" className="cta-button inline-flex px-8 py-3.5 bg-white text-[#0A1628] font-semibold rounded-full">Discuss this module for your firm →</Link>
-            </div>
-          </div>
-        </div>
+          </section>
+        ))}
       </div>
 
-      {/* All Modules */}
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <div className="uppercase tracking-[3px] text-xs text-white/60 mb-1">COMPLETE LIBRARY</div>
-            <h3 className="text-3xl font-semibold tracking-tight">Additional modules available</h3>
-          </div>
-          <Link href="/book-consultation" className="hidden md:block text-sm font-medium text-[#60A5FA] hover:underline">Speak to our solutions team →</Link>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-4">
-          {modules.map((mod, index) => (
-            <div key={index} className="module-card border border-white/10 hover:border-white/20 rounded-3xl px-8 py-8">
-              <h4 className="font-semibold text-xl tracking-tight mb-3">{mod.name}</h4>
-              <p className="text-white/75 leading-snug text-[15px]">{mod.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-14 text-center border-t border-white/10 pt-10">
-          <p className="text-white/60 mb-5">Need something specific not listed here?</p>
-          <Link href="/book-consultation" className="cta-button inline-block px-8 py-3 rounded-full border border-white/30 hover:bg-white/5 font-medium">Request a custom module discussion</Link>
+      <div className="border-t border-white/[0.06] bg-white/[0.02] py-16">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <h2 className="display text-3xl">Still not sure where your pain fits?</h2>
+          <p className="mt-4 text-[#8a8f98]">
+            Tell us what slows your office down — locked accounts, slow starters, messy leavers,
+            laptop orders, or “we never know what’s going on”. We’ll map it to Override in plain
+            English.
+          </p>
+          <Link href="/book-consultation" className="btn-primary mt-8 inline-flex">
+            Talk it through
+          </Link>
         </div>
       </div>
     </div>

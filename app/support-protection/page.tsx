@@ -1,53 +1,59 @@
 import Link from 'next/link';
 
-export default function SupportProtection() {
-  const pillars = [
-    {
-      title: "Ongoing Maintenance & Upgrades",
-      points: [
-        "Continuous improvement of your applications",
-        "Monthly feature releases and performance optimisation",
-        "Proactive monitoring and issue resolution",
-        "Quarterly strategic technology reviews"
-      ]
-    },
-    {
-      title: "Cyber Security",
-      points: [
-        "24/7 Security Operations Centre",
-        "Endpoint detection & response",
-        "Vulnerability management and patching",
-        "Annual penetration testing and compliance reporting",
-        "Employee security awareness training"
-      ]
-    },
-    {
-      title: "Microsoft Licensing",
-      points: [
-        "Optimised licensing aligned to actual usage",
-        "Full compliance management",
-        "Access to the latest Microsoft 365 and Azure capabilities",
-        "Transparent pricing with no hidden margins"
-      ]
-    }
-  ];
+const pillars = [
+  {
+    title: 'Human engineers on standby',
+    points: [
+      'AI handles routine fixes first',
+      'If it’s stuck for about ten minutes, a person takes over',
+      'Urgent problems go straight to a human',
+      'They arrive with the full history already written down',
+    ],
+  },
+  {
+    title: 'Safer by design',
+    points: [
+      'Big changes need a clear confirmation',
+      'Approvers control cost and access changes',
+      'One-time sign-in codes are shown once — not left in chat forever',
+      'Actions are logged for peace of mind and audits',
+    ],
+  },
+  {
+    title: 'Your Microsoft, your rules',
+    points: [
+      'You keep ownership of Microsoft 365',
+      'Month-to-month freedom — not a trap contract story',
+      'Built for UK SMEs, including regulated firms',
+      'Transparent about what Override did and why',
+    ],
+  },
+];
 
+export default function SupportProtection() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <div className="max-w-2xl mb-14">
-        <div className="text-[#60A5FA] text-sm tracking-[2px] font-medium mb-3">PEACE OF MIND</div>
-        <h1 className="section-heading tracking-[-2px]">Everything covered.<br />Nothing left to chance.</h1>
-        <p className="mt-5 text-xl text-white/70">We don’t just build your applications. We become your long-term technology partner responsible for keeping everything running, secure and up to date.</p>
+    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+      <div className="max-w-2xl">
+        <p className="eyebrow mb-3">Support & protection</p>
+        <h1 className="display text-4xl sm:text-5xl">
+          You’re in the driving seat.
+          <br />
+          <span className="gradient-text">We’re in the passenger seat with a map.</span>
+        </h1>
+        <p className="mt-5 text-lg leading-relaxed text-[#8a8f98]">
+          Self-serve doesn’t mean abandoned. Override is built so non-technical people can run
+          everyday IT — with guardrails, records, and real help when something nasty happens.
+        </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-16">
-        {pillars.map((pillar, index) => (
-          <div key={index} className="card border border-white/10 rounded-3xl p-9">
-            <h3 className="font-semibold text-2xl tracking-tight mb-7 leading-tight">{pillar.title}</h3>
-            <ul className="space-y-4 text-[15px]">
-              {pillar.points.map((point, i) => (
-                <li key={i} className="flex gap-3 text-white/80">
-                  <span className="mt-1.5 block h-[5px] w-[5px] rounded-full bg-[#60A5FA] flex-shrink-0" />
+      <div className="mt-14 grid gap-4 md:grid-cols-3">
+        {pillars.map((p) => (
+          <div key={p.title} className="card p-6 sm:p-8">
+            <h2 className="text-xl font-semibold tracking-tight text-white">{p.title}</h2>
+            <ul className="mt-6 space-y-3">
+              {p.points.map((point) => (
+                <li key={point} className="flex gap-3 text-[15px] text-[#8a8f98]">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7170ff]" />
                   {point}
                 </li>
               ))}
@@ -56,10 +62,27 @@ export default function SupportProtection() {
         ))}
       </div>
 
-      <div className="bg-[#111827] rounded-3xl p-12 text-center">
-        <h3 className="text-3xl tracking-tight font-semibold mb-4">One partner. One contract. Full accountability.</h3>
-        <p className="max-w-md mx-auto text-white/70 mb-8">Support, security and licensing are included in a single predictable monthly fee.</p>
-        <Link href="/book-consultation" className="cta-button inline-block px-9 py-4 bg-white text-[#0A1628] font-semibold rounded-full">Discuss your support requirements</Link>
+      <div className="mt-16 rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#12131a] to-[#0b0c12] p-8 sm:p-12">
+        <h2 className="display text-2xl sm:text-3xl">What we won’t do</h2>
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+          {[
+            'Hide problems behind a ticket number and silence',
+            'Force you to learn engineer tools to do basic jobs',
+            'Take ownership of your Microsoft away from you',
+            'Pretend AI never needs a human backup',
+          ].map((line) => (
+            <li
+              key={line}
+              className="rounded-xl border border-white/[0.06] bg-black/20 px-4 py-3 text-sm text-[#d0d6e0]"
+            >
+              <span className="mr-2 text-red-300/80">×</span>
+              {line}
+            </li>
+          ))}
+        </ul>
+        <Link href="/book-consultation" className="btn-primary mt-8 inline-flex">
+          Discuss how support works for your team
+        </Link>
       </div>
     </div>
   );

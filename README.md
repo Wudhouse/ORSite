@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Override marketing site (ORSite)
 
-## Getting Started
+Private marketing site for **Override** — Fire your MSP.
 
-First, run the development server:
+Audience: UK SME office managers who already loathe their MSP. Override is an **AI business**, not an MSP. Month to month. The office manager runs IT in **Override Portal**.
+
+This repository is **private** and should stay private.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | Purpose |
+| --- | --- |
+| `/` | Homepage |
+| `/how-it-works` | Day-in-the-life + getting started |
+| `/solutions` | Features in plain English |
+| `/pricing` | Official commercial pricing |
+| `/videos` | Watch — Ease / Security / Cost |
+| `/declaration` | The Override Declaration |
+| `/bring` | Bring a company (coming as we take customers) |
+| `/support-protection` | Human safety net |
+| `/results` | Life with Override |
+| `/book-consultation` | Begin your permanent exit |
 
-## Learn More
+## Assets
 
-To learn more about Next.js, take a look at the following resources:
+| Path | Purpose |
+| --- | --- |
+| `public/assets/logo-mark.png` | Nav / footer mark |
+| `public/assets/logo.jpg` | Full cinematic still (hero use only) |
+| `public/assets/world.jpg` | Atmosphere |
+| `public/assets/videos/*` | 16:9 films + posters (`ease`, `security`, `cost`) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Do not put the full cinematic still in the header — mark only.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Copy rules
 
-## Deploy on Vercel
+- Override is an AI business. Do **not** call it an MSP, managed service, or partner.
+- Talk to the office manager, not engineers.
+- Say **sign-in**, not identity or tenant.
+- Product name is **Override Portal**.
+- Official pricing lives on `/pricing` and must stay commercial copy. Do not invent extras.
+- The **£500 Promise** sits on the pricing page after the plans — not as a homepage-only hero claim without the 15+ clause.
+- Do not publish Huntress, MDR, or 24/7 engineers as included.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 16 · React 19 · Tailwind CSS 4

@@ -1,91 +1,115 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const navLinks = [
+  { href: '/how-it-works', label: 'How it works' },
+  { href: '/solutions', label: 'Features' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/videos', label: 'Watch' },
+  { href: '/declaration', label: 'Declaration' },
+];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/how-it-works', label: 'How It Works' },
-    { href: '/solutions', label: 'Solutions' },
-    { href: '/results', label: 'Results' },
-    { href: '/support-protection', label: 'Support & Protection' },
-  ];
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#0A1628]/95 backdrop-blur-lg border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center">
-            <span className="text-[#0A1628] font-semibold text-2xl tracking-[-1.5px]">OR</span>
-          </div>
-          <span className="font-semibold text-2xl tracking-[-1px]">OverRide</span>
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled || open
+          ? 'nav-blur border-b border-white/[0.06]'
+          : 'border-b border-transparent bg-transparent'
+      }`}
+    >
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <Link href="/" className="group flex items-center gap-2.5">
+          <span className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl">
+            <Image
+              src="/assets/logo-mark.png"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
+              priority
+            />
+          </span>
+          <span className="text-[15px] font-semibold tracking-tight">
+            Override
+            <span className="ml-1.5 hidden text-[10px] font-medium uppercase tracking-[0.18em] text-[#8a8f98] sm:inline">
+              not an msp
+            </span>
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-9 text-sm font-medium">
+        <nav className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
+            <Link
+              key={link.href}
               href={link.href}
-              className="hover:text-[#60A5FA] transition-colors"
+              className="rounded-lg px-3 py-2 text-[13px] font-medium text-[#d0d6e0] transition hover:bg-white/[0.04] hover:text-white"
             >
               {link.label}
             </Link>
           ))}
-        </div>
+        </nav>
 
-        <div className="hidden md:flex items-center gap-4">
-          <Link 
+        <div className="flex items-center gap-2">
+          <Link
             href="/book-consultation"
-            className="px-6 py-2.5 rounded-full bg-white text-[#0A1628] font-semibold text-sm hover:bg-[#E0E7FF] transition-all active:scale-[0.985]"
+            className="btn-primary hidden !px-4 !py-2.5 text-[13px] sm:inline-flex"
           >
-            Book Consultation
+            Begin your exit
           </Link>
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03] lg:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2"
-          aria-label="Toggle menu"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            {isOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6h12v12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden border-t border-white/10 bg-[#0A1628]">
-          <div className="px-6 py-8 flex flex-col gap-6 text-lg">
+      {open && (
+        <div className="border-t border-white/[0.06] bg-[#05060a]/95 px-4 py-4 backdrop-blur-xl lg:hidden">
+          <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href} 
-                onClick={() => setIsOpen(false)}
-                className="hover:text-[#60A5FA] transition-colors"
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-3 py-3 text-sm font-medium text-[#d0d6e0] hover:bg-white/[0.04]"
               >
                 {link.label}
               </Link>
             ))}
-            <Link 
+            <Link
               href="/book-consultation"
-              onClick={() => setIsOpen(false)}
-              className="mt-4 w-full text-center px-6 py-3.5 rounded-full bg-white text-[#0A1628] font-semibold"
+              onClick={() => setOpen(false)}
+              className="btn-primary mt-2 justify-center"
             >
-              Book Consultation
+              Begin your permanent exit
             </Link>
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

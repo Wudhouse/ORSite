@@ -1,59 +1,96 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#08101F] border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-5 gap-x-8 gap-y-12">
+    <footer className="border-t border-white/[0.06] bg-black/20">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-5">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-xl bg-white flex items-center justify-center">
-                <span className="text-[#0A1628] font-semibold text-xl tracking-[-1px]">OR</span>
+            <div className="mb-4 flex items-center gap-2.5">
+              <Image
+                src="/assets/logo-mark.png"
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 object-contain"
+              />
+              <div>
+                <p className="text-sm font-semibold">Override</p>
+                <p className="text-[12px] text-[#62666d]">We are not an MSP.</p>
               </div>
-              <span className="font-semibold text-2xl tracking-[-0.5px]">OverRide</span>
             </div>
-            <p className="text-white/60 max-w-xs text-[15px]">
-              Modern application development and strategic IT for UK SMEs. Replace your MSP.
+            <p className="max-w-xs text-sm leading-relaxed text-[#8a8f98]">
+              The AI that makes MSPs unnecessary. For UK office managers who want to run Microsoft
+              IT themselves — month to month, with a human when it’s hard.
+            </p>
+            <p className="mt-4 text-sm text-[#8a8f98]">
+              <Link href="/bring" className="text-[#7170ff] hover:text-[#a5b4fc]">
+                Know a company? 3 months free if they become a customer.
+              </Link>
+            </p>
+            <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-[#62666d]">
+              Coming as we take customers
             </p>
           </div>
 
           <div>
-            <div className="font-semibold mb-4 text-sm tracking-wider text-white/80">EXPLORE</div>
-            <div className="space-y-3 text-sm text-white/70">
-              <Link href="/how-it-works" className="block hover:text-white">How It Works</Link>
-              <Link href="/solutions" className="block hover:text-white">Solutions</Link>
-              <Link href="/results" className="block hover:text-white">Results</Link>
-              <Link href="/support-protection" className="block hover:text-white">Support &amp; Protection</Link>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#8a8f98]">
+              Explore
+            </p>
+            <div className="space-y-3 text-sm text-[#d0d6e0]">
+              <Link href="/how-it-works" className="block hover:text-white">
+                How it works
+              </Link>
+              <Link href="/solutions" className="block hover:text-white">
+                Features
+              </Link>
+              <Link href="/pricing" className="block hover:text-white">
+                Pricing
+              </Link>
+              <Link href="/videos" className="block hover:text-white">
+                Watch
+              </Link>
+              <Link href="/declaration" className="block hover:text-white">
+                The Declaration
+              </Link>
             </div>
           </div>
 
           <div>
-            <div className="font-semibold mb-4 text-sm tracking-wider text-white/80">COMPANY</div>
-            <div className="space-y-3 text-sm text-white/70">
-              <Link href="/book-consultation" className="block hover:text-white">Book Consultation</Link>
-              <a href="#" className="block hover:text-white">About Us</a>
-              <a href="#" className="block hover:text-white">Careers</a>
-              <a href="#" className="block hover:text-white">Blog</a>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#8a8f98]">
+              Company
+            </p>
+            <div className="space-y-3 text-sm text-[#d0d6e0]">
+              <Link href="/book-consultation" className="block hover:text-white">
+                Begin your exit
+              </Link>
+              <Link href="/bring" className="block hover:text-white">
+                Bring a company
+              </Link>
+              <Link href="/support-protection" className="block hover:text-white">
+                Support
+              </Link>
+              <span className="block text-[#62666d]">London, UK</span>
             </div>
           </div>
 
           <div>
-            <div className="font-semibold mb-4 text-sm tracking-wider text-white/80">LEGAL</div>
-            <div className="space-y-3 text-sm text-white/70">
-              <a href="#" className="block hover:text-white">Privacy Policy</a>
-              <a href="#" className="block hover:text-white">Terms of Service</a>
-              <a href="#" className="block hover:text-white">Cyber Security</a>
-              <a href="#" className="block hover:text-white">FCA Compliance</a>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#8a8f98]">
+              Commercial
+            </p>
+            <div className="space-y-3 text-sm text-[#8a8f98]">
+              <p>£19 / person / month</p>
+              <p>Shield £29</p>
+              <p>30 days free</p>
+              <p>Month to month</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <div>© {new Date().getFullYear()} OverRide Ltd. All rights reserved. Registered in England &amp; Wales.</div>
-          <div className="flex gap-6">
-            <span>London, UK</span>
-            <span>hello@override.co.uk</span>
-          </div>
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/[0.06] pt-6 text-[12px] text-[#62666d] sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Override. Fire your MSP.</p>
+          <p className="font-mono uppercase tracking-[0.14em]">not an msp · ai business</p>
         </div>
       </div>
     </footer>
