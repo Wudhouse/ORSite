@@ -17,7 +17,7 @@ export default function BringPage() {
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-[#8a8f98]">
           Know another company that should be on this? When they pay their first invoice, we take
-          three months off your bill.
+          three months off your Override line. Microsoft stays on the invoice.
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export default function BringPage() {
             'You refer another company. A real one. Not your other office. Not the same boss.',
             'They take the 30-day free trial, same as anyone.',
             'They stay. They pay their first invoice.',
-            'We credit your Override bill: three times whatever you pay us that month.',
+            'We credit your Override line: three times whatever you pay us for Override that month.',
             'You can do this three times a year.',
           ].map((line, i) => (
             <li key={line} className="card flex gap-4 p-5">
@@ -45,7 +45,7 @@ export default function BringPage() {
           {[
             'Not for sending a name.',
             'Not for a trial that never pays.',
-            'Not cash. Not a voucher. Credit on your Override bill.',
+            'Not cash. Not a voucher. Credit on your Override line.',
             'Not a sister company, same boss, same group.',
             'Not stacked with an accountant intro on the same new company.',
             'Not the £500 Promise. That is theirs, if they qualify. This is yours.',
@@ -67,7 +67,7 @@ export default function BringPage() {
           },
           {
             q: 'How much is “free”?',
-            a: 'Three times your Override bill for that month. Whatever you actually pay us.',
+            a: 'Three times your Override line for that month. Microsoft stays on the invoice.',
           },
           { q: 'How many times?', a: 'Three companies a year.' },
           {
@@ -87,7 +87,7 @@ export default function BringPage() {
         <p className="eyebrow mb-3">Coming as we take customers</p>
         <h2 className="display text-2xl sm:text-3xl">Know a company? Bring them.</h2>
         <p className="mx-auto mt-4 max-w-xl text-[#8a8f98]">
-          This is not live yet. No form. When it is, the credit lands on your Override bill after
+          This is not live yet. No form. When it is, the credit lands on your Override line after
           they pay their first invoice.
         </p>
         <Link href="/book-consultation" className="btn-primary mt-8 inline-flex">
