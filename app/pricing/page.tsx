@@ -2,9 +2,9 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Override — Prices. Fire your MSP.',
+  title: 'Override — Prices.',
   description:
-    '£19 a person a month. Shield £29. 30 days free. Month to month. Five people minimum. Fire your MSP.',
+    'Microsoft admin for £19 a person a month. Shield £29. 30 days free. Month to month. Five people minimum.',
 };
 
 export default function PricingPage() {
@@ -12,7 +12,9 @@ export default function PricingPage() {
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
       <div className="max-w-3xl">
         <p className="eyebrow mb-3">Pricing</p>
-        <h1 className="display text-4xl sm:text-6xl">Fire your MSP.</h1>
+        <h1 className="display text-4xl sm:text-6xl">
+          Microsoft admin for £19 a person a month.
+        </h1>
         <p className="mt-5 text-xl font-medium text-white sm:text-2xl">
           £19 a person a month. Shield £29. 30 days free. Month to month.
         </p>
@@ -63,9 +65,19 @@ export default function PricingPage() {
               <span className="text-emerald-400">✓</span> Email in is handled. You get a rating link
               when it closes.
             </li>
+          </ul>
+
+          <h3 className="mt-8 text-sm font-semibold uppercase tracking-[0.14em] text-[#d0d6e0]">
+            Also on the bill
+          </h3>
+          <ul className="mt-3 space-y-3 text-[15px] leading-relaxed text-[#8a8f98]">
             <li className="flex gap-2">
-              <span className="text-emerald-400">✓</span> 1 hour of AI consultancy a month — roadmap
-              sessions, with options to train you or build it for you.
+              <span className="text-[#d0d6e0]">·</span> Microsoft 365 sits on the Override invoice,
+              at Microsoft’s list price. One bill.
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#d0d6e0]">·</span> Laptops, screens and docks: we quote them.
+              You buy through us if you want. Not a web shop.
             </li>
           </ul>
 
@@ -74,19 +86,16 @@ export default function PricingPage() {
           </h3>
           <ul className="mt-3 space-y-3 text-[15px] leading-relaxed text-[#8a8f98]">
             <li className="flex gap-2">
-              <span className="text-[#62666d]">–</span> Microsoft 365 sits on the Override invoice,
-              at Microsoft’s list price. One bill.
-            </li>
-            <li className="flex gap-2">
-              <span className="text-[#62666d]">–</span> Laptops, screens and docks: we quote them.
-              You buy through us if you want. Not a web shop.
-            </li>
-            <li className="flex gap-2">
               <span className="text-[#62666d]">–</span> On-site visits.
             </li>
             <li className="flex gap-2">
-              <span className="text-[#62666d]">–</span> Huntress, 24/7 security operations, or
-              overnight human cover.
+              <span className="text-[#62666d]">–</span> Huntress.
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#62666d]">–</span> 24/7 security operations.
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#62666d]">–</span> Overnight human cover.
             </li>
           </ul>
         </article>
@@ -220,7 +229,7 @@ export default function PricingPage() {
 
       <div className="mt-12 flex flex-wrap gap-3">
         <Link href="/book-consultation" className="btn-primary">
-          Begin your permanent exit
+          Book a walkthrough
         </Link>
         <Link href="/how-it-works" className="btn-ghost">
           How it works

@@ -1,6 +1,6 @@
 # Override marketing site (ORSite)
 
-Private marketing site for **Override** — Fire your MSP.
+Private marketing site for **Override**.
 
 Audience: UK SME office managers who already loathe their MSP. Override is an **AI business**, not an MSP. Month to month. The office manager runs IT in **Override Portal**.
 
@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/bring` | Bring a company (coming as we take customers) |
 | `/support-protection` | Human safety net |
 | `/results` | Life with Override |
-| `/book-consultation` | Begin your permanent exit |
+| `/book-consultation` | Book a walkthrough |
 
 ## Assets
 
