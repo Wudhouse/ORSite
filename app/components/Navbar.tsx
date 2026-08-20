@@ -69,7 +69,7 @@ export default function Navbar() {
             href="/book-consultation"
             className="btn-primary hidden !px-4 !py-2.5 text-[13px] sm:inline-flex"
           >
-            Begin your exit
+            Book a walkthrough
           </Link>
           <button
             type="button"
@@ -106,7 +106,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-primary mt-2 justify-center"
             >
-              Begin your permanent exit
+              Book a walkthrough
             </Link>
           </div>
         </div>

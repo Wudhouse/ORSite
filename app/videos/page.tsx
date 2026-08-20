@@ -4,9 +4,9 @@ import { existsSync } from 'fs';
 import path from 'path';
 
 export const metadata: Metadata = {
-  title: 'Override — Watch. Fire your MSP.',
+  title: 'Override — Watch.',
   description:
-    'Watch the office manager take IT back. Override is the AI that runs your IT. Fire your MSP.',
+    'Watch the office manager take IT back. Override is the AI that runs your IT.',
 };
 
 const films = [
@@ -106,7 +106,7 @@ export default function VideosPage() {
           See prices
         </Link>
         <Link href="/book-consultation" className="btn-ghost">
-          Begin your permanent exit
+          Book a walkthrough
         </Link>
       </div>
     </div>

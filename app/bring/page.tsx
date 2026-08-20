@@ -91,7 +91,7 @@ export default function BringPage() {
           they pay their first invoice.
         </p>
         <Link href="/book-consultation" className="btn-primary mt-8 inline-flex">
-          Begin your permanent exit
+          Book a walkthrough
         </Link>
       </div>
     </div>

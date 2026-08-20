@@ -80,7 +80,7 @@ export default function Home() {
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <Link href="/book-consultation" className="btn-primary">
-            Begin your permanent exit
+            Book a walkthrough
             <span aria-hidden>→</span>
           </Link>
           <Link href="/pricing" className="btn-ghost">
@@ -302,58 +302,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI consultancy teaser */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-[#12131a] via-[#0b0c12] to-[#15102a] p-6 sm:p-10 lg:p-12">
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-            <div>
-              <p className="eyebrow mb-4">Included with Override</p>
-              <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
-                An hour of AI consultancy.
-                <br />
-                <span className="gradient-text">Every month.</span>
-              </h2>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-[#d0d6e0]">
-                Each Override customer gets an hour of AI consultancy a month — on Teams or in
-                person where geography allows (we’re not flying to Brazil). We use it to produce
-                your AI roadmap.
-              </p>
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#8a8f98]">
-                Then you choose: we train you to implement AI in the business, or we build the AI
-                for you. Need longer? Buy more hours or days. Every roadmap comes with an ROI
-                calculator so you can see the impact.
-              </p>
-              <Link href="/ai-consultancy" className="btn-primary mt-8 inline-flex">
-                How AI consultancy works
-                <span aria-hidden>→</span>
-              </Link>
-            </div>
-            <ul className="space-y-3">
-              {[
-                '1 hour / month included',
-                'AI roadmap for your business',
-                'Train you — or we build it',
-                'ROI calculator on every roadmap',
-                'Extra hours or days if you need them',
-              ].map((line) => (
-                <li
-                  key={line}
-                  className="flex items-start gap-3 rounded-xl border border-white/[0.06] bg-black/25 px-4 py-3 text-sm text-[#d0d6e0]"
-                >
-                  <span className="mt-0.5 text-emerald-400">✓</span>
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing teaser — commercial copy from ORSite */}
       <section className="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
         <div className="overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-[#5e6ad2]/25 via-[#0b0c12] to-cyan-500/15 p-6 sm:p-10">
           <p className="eyebrow mb-3">Prices</p>
-          <h2 className="display text-3xl sm:text-5xl">Fire your MSP.</h2>
+          <h2 className="display text-3xl sm:text-5xl">
+            Microsoft admin for £19 a person a month.
+          </h2>
           <p className="mt-4 text-xl text-white">
             £19 a person a month. Shield £29. 30 days free. Month to month.
           </p>

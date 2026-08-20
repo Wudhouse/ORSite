@@ -66,7 +66,7 @@ export default function Footer() {
             </p>
             <div className="space-y-3 text-sm text-[#d0d6e0]">
               <Link href="/book-consultation" className="block hover:text-white">
-                Begin your exit
+                Book a walkthrough
               </Link>
               <Link href="/bring" className="block hover:text-white">
                 Bring a company
@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/[0.06] pt-6 text-[12px] text-[#62666d] sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Override. Fire your MSP.</p>
+          <p>© {new Date().getFullYear()} Override.</p>
           <p className="font-mono uppercase tracking-[0.14em]">not an msp · ai business</p>
         </div>
       </div>

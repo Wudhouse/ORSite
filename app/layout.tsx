@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Override — Fire your MSP",
+  title: "Override",
   description:
     "We didn’t build a better MSP. We built the AI that makes MSPs unnecessary. £19 a person a month. 30 days free. Month to month. The office manager runs IT in Override Portal.",
 };
