@@ -74,16 +74,15 @@ export default function PricingPage() {
           </h3>
           <ul className="mt-3 space-y-3 text-[15px] leading-relaxed text-[#8a8f98]">
             <li className="flex gap-2">
-              <span className="text-[#62666d]">–</span> Microsoft 365 licences (you keep paying
-              Microsoft; we can pass them through at Microsoft’s list price if you want one bill
-              later).
+              <span className="text-[#62666d]">–</span> Microsoft 365 sits on the Override invoice,
+              at Microsoft’s list price. One bill.
             </li>
             <li className="flex gap-2">
-              <span className="text-[#62666d]">–</span> Buying extra Microsoft licences or hardware
-              (we arrange it, you pay the vendor).
+              <span className="text-[#62666d]">–</span> Laptops, screens and docks: we quote them.
+              You buy through us if you want. Not a web shop.
             </li>
             <li className="flex gap-2">
-              <span className="text-[#62666d]">–</span> New laptops or on-site visits.
+              <span className="text-[#62666d]">–</span> On-site visits.
             </li>
             <li className="flex gap-2">
               <span className="text-[#62666d]">–</span> Huntress, 24/7 security operations, or
@@ -140,8 +139,8 @@ export default function PricingPage() {
         </h2>
         <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-[#8a8f98]">
           Already with Override? Bring another UK company in. When they pay their first invoice, we
-          take three months off your bill. Not a token. Three times whatever you pay us that month.
-          Do it up to three times a year.
+          take three months off your Override line. Not a token. Three times whatever you pay us
+          for Override that month. Microsoft stays on the invoice. Do it up to three times a year.
         </p>
         <Link href="/bring" className="btn-ghost mt-6 inline-flex">
           How Bring a company works
@@ -214,7 +213,7 @@ export default function PricingPage() {
           Everyone in your Microsoft company who is a real person. Not guests, not meeting rooms.
           Not shared mailboxes. Not disabled accounts.
         </li>
-        <li>Microsoft licences extra at list.</li>
+        <li>Microsoft 365 sits on the Override invoice, at Microsoft’s list price. One bill.</li>
         <li>Human cover UK weekdays 8am–6pm.</li>
         <li>The app is available all the time.</li>
       </ul>
